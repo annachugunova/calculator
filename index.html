@@ -15,7 +15,7 @@
     <div class="container">
       
       <div class="calculator">
-        <form id="form">
+        <div id="form">
         
           <h1 class="title">Ипотечный калькулятор</h1>
 
@@ -24,8 +24,8 @@
 
             <div class="form-block-input">
               <input type="text" name="price" value="3100000">
-              <button class="btn-minus">–</button>
-              <button class="btn-plus">+</button>
+              <button class="btn-minus" name="price" value="less">–</button>
+              <button class="btn-plus" name="price" value="more">+</button>
             </div>
           </div>
 
@@ -34,8 +34,8 @@
 
             <div class="form-block-input">
               <input type="text" name="initial-payment" value="620000">
-              <button class="btn-minus">–</button>
-              <button class="btn-plus">+</button>
+              <button class="btn-minus" name="initial-payment" value="less">–</button>
+              <button class="btn-plus" name="initial-payment" value="more">+</button>
             </div>
           </div>
 
@@ -44,14 +44,12 @@
 
             <div class="form-block-input">
               <input type="text" name="duration" value="20">
-              <button class="btn-minus">–</button>
-              <button class="btn-plus">+</button>
+              <button class="btn-minus" name="duration" value="less">–</button>
+              <button class="btn-plus" name="duration" value="more">+</button>
             </div>
           </div>
 
-         
-    
-        </form>
+        </div>
 
         <div class="description">
           <p>Расчет является предварительным.</p>
@@ -65,12 +63,12 @@
 
           <div class="summary-block">
             <p class="summary-block-label">Сумма кредита</p>
-            <p class="summary-block-value">2300000 ₽</p>
+            <p class="summary-block-value" id="total"></p>
           </div>
 
           <div class="summary-block">
             <p class="summary-block-label">Ежемесячный платеж</p>
-            <p class="summary-block-value">23000 ₽</p>
+            <p class="summary-block-value" id="payment"></p>
           </div>
 
           <div class="summary-block">
