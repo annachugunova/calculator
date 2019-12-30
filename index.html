@@ -12,12 +12,80 @@
 
   <body>
 
+    <div class="container">
+      
+      <div class="calculator">
+        <form id="form">
+        
+          <h1 class="title">Ипотечный калькулятор</h1>
+
+          <div class="form-block">
+            <p>Стоимость жилья, ₽</p>
+
+            <div class="form-block-input">
+              <input type="text" name="price" value="3100000">
+              <button class="btn-minus">–</button>
+              <button class="btn-plus">+</button>
+            </div>
+          </div>
+
+          <div class="form-block">
+            <p>Первоначальный взнос, ₽</p>
+
+            <div class="form-block-input">
+              <input type="text" name="initial-payment" value="620000">
+              <button class="btn-minus">–</button>
+              <button class="btn-plus">+</button>
+            </div>
+          </div>
+
+          <div class="form-block">
+            <p>Срок кредитования, лет</p>
+
+            <div class="form-block-input">
+              <input type="text" name="duration" value="20">
+              <button class="btn-minus">–</button>
+              <button class="btn-plus">+</button>
+            </div>
+          </div>
+
+         
     
+        </form>
+
+        <div class="description">
+          <p>Расчет является предварительным.</p>
+          <p>Точные условия по кредиту вам будут предоставлены в отделении банка.</p>
+        </div>
+      </div>
+
+      <div class="result">
+        <div class="result-summary">
+          <h2 class="title">Результаты расчета</h2>
+
+          <div class="summary-block">
+            <p class="summary-block-label">Сумма кредита</p>
+            <p class="summary-block-value">2300000 ₽</p>
+          </div>
+
+          <div class="summary-block">
+            <p class="summary-block-label">Ежемесячный платеж</p>
+            <p class="summary-block-value">23000 ₽</p>
+          </div>
+
+          <div class="summary-block">
+            <p class="summary-block-label">Процентная ставка: 10.8%</p>
+          </div>
+        </div>
+
+        <a class="result-link" href="#">Оформить заявку</a>
+        
+      </div>
+    </div>
   	
 
     <script src="./js/main.js"></script>
 
-
   </body>
 
-  </html>
+</html>
