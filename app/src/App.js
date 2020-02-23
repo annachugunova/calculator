@@ -54,17 +54,26 @@ export class App extends React.Component {
       switch (name) {
       case "price": 
         value += isMore ? 50000 : -50000
+        if (value < state.initialPayment) value = state.initialPayment
         break
       case "initialPayment":
         value += isMore ? 10000 : -10000
+        if (value < state.price * 0.2) {
+          value = state.price * 0.2 
+          break
+        }
+        if (value > state.price)
+          value = state.price
         break
       default: 
         value += isMore ? 1 : -1
+        if (value < 1) {
+          value = 1
+          break
+        }
+        if (value > 30) value = 30
         break
     }
-
-    if (value < 0)
-      value = 0
 
       return {[name]: value}
     }, this.calculator)
@@ -128,7 +137,8 @@ export class App extends React.Component {
 
           <SummaryField
             label={`Процентная ставка: ${this.state.percent}%`}
-          />   
+          /> 
+            
         </div>       
 
         <a class="result-link" href="#">Оформить заявку</a>
